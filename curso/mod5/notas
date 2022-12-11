@@ -1,0 +1,6 @@
+echo -e "\033[36mIsabella"
+    -e para usar as cores
+    "\033[CODm_____"
+        COD = código da cor ou estilo
+        _____ texto a ser estilizado
+    "\033[COD1;COD2m_____"

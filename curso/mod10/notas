@@ -1,0 +1,38 @@
+sudo apt-get install dialog
+
+MOSTRAR ARQUIVO NA CAIXA
+dialog --title "Lista de Usuários" --textbox banco_de_dados.txt  20 40
+    --textbox recebe arquivo
+    -- 20 40 = tamanho 20 x 40
+
+RECEBER VARIÁVEL
+VARIÁVEL = dialog --title "Insira o nome" --stdout --inputbox "Digite o seu nome" 0 0
+    --stdout para poder armazenar na variável
+
+MENSAGEM NA TELA
+dialog --title "ERRO" --msgbox "Usuário já existente" 6 40
+
+MENU DE OPÇÕES
+dialog --title "Gerenciamento de Usuários 2.0" --stdout --menu "Escolha uma das opções abaixo:" 0 0 0 lista "Listar todos os usuários do sistema" inserir "Inserir um novo usuário" remover "Remover um usuário do sistema"
+
+
+
+LOOP INFINITO
+while :
+do
+
+done
+
+
+TROCAR PADRÃO
+fazer
+    1:matheus
+    2:joao manuel
+virar
+    1 "matheus"
+    2 "joao manuel"
+egrep "^#|^$" -v banco_de_dados.txt | sort -h | cut -d : -f 1,2 | sed 's/:/ "/;s/$/"/'
+
+
+EVAL **************************
+eval= colocado no início de um comando para que o terminal entenda todo o comando como uma string

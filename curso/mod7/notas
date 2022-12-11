@@ -1,0 +1,22 @@
+Ctrl + U para ver o código HTML do site
+
+sudo apt-get install lynx -y
+    programa para ler código html no terminal
+
+lynx -source http://site.com
+    mostra o código html no terminal
+
+lynx -source http://lxer.com/ | grep "blurb" > titulos.txt
+    armazenei a saída no arquivo titulos.txt
+
+lynx -source http://lxer.com/ | grep "blurb" | sed 's/^<div class=\"blurb\"><.*><span class=\"storyheadline\">[a-z]*//' | sed 's/<\/span.*//' > titulos.txt
+cat titulos.txt | sed 's/div.*line">//' | sed 's/<\/span.*//'
+
+    \/ - '\' transforma '/' num caractere normal do regex
+    sed - tem várias funções
+        sed s'grupo1//grupo2' substitui o grupo1 pelo grupo2
+
+forma reduzida do anterior:
+    cat titulos.txt | sed 's/div.*line">//;s/<\/span.*//'
+
+    lynx -source http://lxer.com/ | grep "blurb" | sed 's/<div.*line">//;s/<\/span.*//' > titulos.txt

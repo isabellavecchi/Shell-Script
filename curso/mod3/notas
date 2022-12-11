@@ -1,0 +1,6 @@
+cat /etc/passwd | cut -d : -f 1
+    -d = delimitador (:)
+    -f = num da coluna (1 é a primeira)
+
+cat /etc/passwd | cut -d : -f 1 | sort
+    o de cima em ordem alfabética   

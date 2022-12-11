@@ -1,0 +1,29 @@
+    cat /etc/passwd | grep "^a"
+é o mesmo que:
+    grep "^i" /etc/passwd
+mas a segunda forma gasta menos recurso computacional
+
+^... - começa com o próximo dígito, ou com qualquer um do conjunto []
+
+[^] - negação do conjunto
+
+...$ - termina com o próximo dígito, ou com qualquer um do conjunto []
+ 
+ .* - qualquer coisa
+ 
+ exemplo: ^r.*h$
+                começa com 'r', vem qualquer coisa e termina com 'h'
+
+. - qualquer dígito
+
+
+EXPRESSÃO REGULAR __EXTENDIDA__
+egrep "^[a-z]{5}" /etc/passwd
+    tem que utilizar o EGREP
+
+{} - quantidade de termos
+{n,} - quantidade 'n' ou mais
+|   - operador OR
+egrep "^[isabella|root]" /etc/passwd
+egrep "^isabella|^root" /etc/passwd
+    começa com 'isabella' ou 'root'

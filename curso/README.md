@@ -1,0 +1,1 @@
+Curso de Shell da Udemy, ofertado para mim pela empresa Kyros.

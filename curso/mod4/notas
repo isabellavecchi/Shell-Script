@@ -1,0 +1,14 @@
+BASH
+    para debugar
+    bash -x ./file.sh
+    bash -xv ./file.sh  ->  mostra o código todo, inclusive comentários
+
+SET
+    set -x
+    code
+    set +x
+
+    executa normalmente ./file.sh
+
+FUNÇÃO
+    debug_2.sh

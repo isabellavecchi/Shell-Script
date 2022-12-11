@@ -1,0 +1,19 @@
+cat > file.txt << EOF
+bla
+blabla
+    bla
+EOF
+
+cria o arquivo file.txt com as 3 linhas passadas
+(funciona no terminal)
+
+
+PARÂMETRO DEFAULT
+${1:-1}     ->  se $1 n for informada, o valor utilizado é 1
+${2:-10}    ->  se $2 n for informada, o valor utilizado é 10
+
+
+FORMATA DATA
+FormataData() {
+    date -d "@${1}" +%d/%m/%Y # Formata de Unix para dd/mm/yyyy
+}
